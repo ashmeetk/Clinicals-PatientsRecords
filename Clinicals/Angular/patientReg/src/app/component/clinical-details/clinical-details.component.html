@@ -1,0 +1,19 @@
+<h1>Patient Details:</h1>
+First Name: {{patient?.firstName}}<br/>
+Last Name:{{patient?.lastName}}<br/>
+Age:{{patient?.age}}<br/>
+
+<h1>Patient Clinical Data:</h1>
+
+<label> Clinical Entry Type: </label>  
+<select [(ngModel)]="componentName">  
+    <option value = "bp"> Blood Pressure(Sys/Dys)  </option>  
+    <option value = "hw"> Height/Weight   </option>  
+    <option value = "heartRate"> Heart Rate  </option>  
+</select>  
+
+Value: <input type="text" [(ngModel)]="componentValue"/>
+
+<br/><br/><button (click)="onConfirm()">Confirm</button>
+
+<br/><br/><a href="">Go Back</a>

@@ -1,0 +1,15 @@
+<h1>Patient Details:</h1>
+First Name: {{analyzedClinicalData?.firstName}}<br/>
+Last Name:{{analyzedClinicalData?.lastName}}<br/>
+Age:{{analyzedClinicalData?.age}}<br/>
+
+<h1>Clinical Report:</h1>
+<i> (Note: Recent most measured values are shown against all below metrics)</i><br/>
+
+<div *ngFor="let component of analyzedClinicalData?.clinicalData">
+    <b>{{component.componentName}}:</b> {{component.componentValue}}  
+</div>
+
+<br/><a href="">Go Back</a>
+
+<button (click)="onClickGraph()">HeartRate</button>
