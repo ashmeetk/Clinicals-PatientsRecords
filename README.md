@@ -48,6 +48,16 @@ REST APIs used in ClinicalDataController are as follows:
                   "componentValue": 180
                 }
 
-
 MySQL Database: Refer to SQL->clinicals.sql
 Two tables patient and clinicaldata are declared. In clinicaldata table, each metric's name is stored as componentName, metric's value is stored as componentValue, metric's measured date and time is stored as measured_date_time.
+
+FrontEnd App:
+To start the app, go to folder Angular -> patientReg -> type ng serve -o. To go to home page, enter: http://localhost:4200/ in google chrome.
+To invoke all backend API's we have used registration.service.ts and initiazed this service in all angular components.
+Components:
+Home: To view list of all patients.
+Register: To add new patient.
+ClinicalDetails: To add metric values for a patient.
+Analyze: To fetch recent most metrics for a patient as well as fetch calculated BMI.
+
+To allow frontend app to be able to send REST api requests to backend, we have added CorsConfig class in the SpringBoot Application.  
